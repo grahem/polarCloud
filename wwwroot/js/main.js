@@ -162,13 +162,13 @@
         $(this).children('.carousel-background').remove();
     });
 
-    $(".carousel").swipe({
-        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-            if (direction === 'left') $(this).carousel('next');
-            if (direction === 'right') $(this).carousel('prev');
-        },
-        allowPageScroll: "vertical"
-    });
+    // $(".carousel").swipe({
+    //     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+    //         if (direction === 'left') $(this).carousel('next');
+    //         if (direction === 'right') $(this).carousel('prev');
+    //     },
+    //     allowPageScroll: "vertical"
+    // });
 
     // Skills section
     $('#skills').waypoint(function () {
