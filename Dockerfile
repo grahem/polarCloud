@@ -1,16 +1,23 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
+# STAGE01 - Build application and its dependencies
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
+EXPOSE 80
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+FROM microsoft/dotnet:2.2-sdk as build
+WORKDIR /src
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
+COPY Site.csproj ./
+RUN dotnet restore Site.csproj
+COPY . .
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+WORKDIR /src
+RUN dotnet publish -c Release -o /app
+
+FROM build as publish
+RUN dotnet publish Site.csproj -c Release -o /app
+
+FROM base as final
 WORKDIR /app
-COPY --from=build-env /app/out .
-ENTRYPOINT ["site", "Site.dll"]
+COPY --from=publish /app .
+
+ENTRYPOINT ["dotnet", "Site.dll"]
