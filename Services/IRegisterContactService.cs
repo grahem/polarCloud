@@ -11,6 +11,6 @@ namespace Site.Services
 {
     public interface IRegisterContactService
     {
-        ContactHttpResponse Register(Contact json );
+        Task Register(Contact json);
     }
 }

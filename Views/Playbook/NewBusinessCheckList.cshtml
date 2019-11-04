@@ -60,6 +60,13 @@
 
             }
 
+            ul {
+                list-style-position: outside;
+            }
+
+            
+
+
             </style>
     </head>
 
@@ -88,7 +95,7 @@
             <p style="margin-top: 40px;"><strong>Setting up and maintaining a business requires adequate decision making, technology investments, and paperwork.  Here's our list:</strong></p>
             <p>If you'd like to use this form, we will track your progress.</p>
 
-            <h3 class="h3"><a href="#" onclick="toggle('foundational');">Foundational</a></h3>
+            <ul style="padding-top: 20px"><li><h3 class="h3"><a href="#" onclick="toggle('foundational');">Foundational</a></h3></li></ul>
             <div id="foundational" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="research"/> Industry research<br>
@@ -96,7 +103,7 @@
                     <p><input type="checkbox" name="chk" class="checkbox" id="members"/> Draft Members and Equity Document<br>
                     <p><input type="checkbox" name="chk" class="checkbox" id="assets"/> List of starting assets<br>
                     <p><input type="checkbox" name="chk" class="checkbox" id="funding"/> Funding model<br>
-                    <p><input type="checkbox" name="chk" class="checkbox" id="feedback"/> Feedback - friends, and families<br>
+                    <p><input type="checkbox" name="chk" class="checkbox" id="feedback"/> Feedback from friend and families<br>
                     <p><input type="checkbox" name="chk" class="checkbox" id="leads"/> Lead acquisition strategy<br>
                     <p><input type="checkbox" name="chk" class="checkbox" id="executiveSummary"/> Executive Summary<br>
                     <p><input type="checkbox" name="chk" class="checkbox" id="timeline"/> Timeline<br>
@@ -104,7 +111,7 @@
                 </ul>
             </div>
 
-            <h3 class="h3"><a href="#internet" onclick="toggle('internet');">Internet Infrastructure and Assets</a></h3>
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#internet" onclick="toggle('internet');">Internet Infrastructure and Assets</a></h3></li></ul>
             <div id="internet" style="display: none">
                 <ul>
                     <p><input type="checkbox" class="checkbox" id="phoneNumbers"/> Phone numbers<br>
@@ -112,7 +119,7 @@
                     <p><input type="checkbox" class="checkbox" id="domain"/> Domain name<br>
                     <p><input type="checkbox" class="checkbox" id="emailServer"/> Email server<br>
                     <p><input type="checkbox" class="checkbox" id="emailServer"/> Website<br>
-                    <p><input type="checkbox" class="checkbox" id="linkedIn"/> Linked-In<br>
+                    <p><input type="checkbox" class="checkbox" id="linkedIn"/> LinkedIn<br>
                     <p><input type="checkbox" class="checkbox" id="crunchbase"/> Crunchbase<br>
                     <p><input type="checkbox" class="checkbox" id="maps"/> Google / Apple Maps<br>
                     <p><input type="checkbox" class="checkbox" id="facebook"/> Facebook<br>
@@ -122,7 +129,7 @@
                 </ul>
             </div>
 
-            <h3 class="h3"><a href="#software" onclick="toggle('software');">Software</a></h3>
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#software" onclick="toggle('software');">Software</a></h3></li></ul>
             <div id="software" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="projectTracking"/> Cloud-based project tracking software<br>
@@ -133,7 +140,7 @@
                 </ul>
             </div>
             
-            <h3 class="h3"><a href="#register" onclick="toggle('register');">Register</a></h3>
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#register" onclick="toggle('register');">Register</a></h3></li></ul>
             <div id="register" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="registeredAgent"/> Determine Registered Agent<br>
@@ -142,7 +149,7 @@
                 </ul>
             </div>
             
-            <h3 class="h3"><a href="#aoo" onclick="toggle('aoo');">File Articles of Organization</a></h3>
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#aoo" onclick="toggle('aoo');">File Articles of Organization</a></h3></li></ul>
             <div id="aoo" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="managementServices"/> Management Structure<br>
@@ -150,7 +157,8 @@
                     <p><input type="checkbox" name="chk" class="checkbox" id="agent"/> Registered Agent<br>
                 </ul>
             </div>
-            <h3 class="h3"><a href="#oa" onclick="toggle('oa');">File Operating Agreement</a></h3>
+
+            <ul  style="margin-top: 40px;"><li><h3 class="h3"><a href="#oa" onclick="toggle('oa');">File Operating Agreement</a></h3></li></ul>
             <div id="oa" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="toc"/> Terms and Conditions<br>
@@ -161,7 +169,8 @@
                     <p><input type="checkbox" name="chk" class="checkbox" id="amending"/> Amending the Agreement<br>
                 </ul>
             </div>
-            <h3 class="h3"><a href="#llc" onclick="toggle('llc');">File Statement of Information (LLC-12 in California)</a></h3>
+            
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#llc" onclick="toggle('llc');">File Statement of Information (LLC-12 in California)</a></h3></li></ul>
             <div id="llc" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="LLCNumber"/> Filing Number<br>
@@ -175,7 +184,8 @@
                     <p><input type="checkbox" name="chk" class="checkbox" id="CEOemailAddress"/> Email Address<br>
                 </ul>
             </div>
-            <h3 class="h3"><a href="#additional" onclick="toggle('additional');">Additional</a></h3>
+            
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#additional" onclick="toggle('additional');">Additional</a></h3></li></ul>
             <div id="additional" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="dba"/> Register DBA with the state government<br>
@@ -229,7 +239,7 @@
                 </ul>
             </div>
 
-            <h3 class="h3"><a href="#docs" onclick="toggle('docs');">Common Documents Requiring Letterheads</a></h3>
+            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#docs" onclick="toggle('docs');">Common Documents Requiring Letterheads</a></h3><ul></li>
             <div id="docs" style="display: none">
             <ul>
                 <p><input type="checkbox" name="chk" class="checkbox" id="lExecutiveSummary"/> Executive Summary<br>
@@ -288,6 +298,7 @@
          <script>
                 function toggle(source) {
                     $("#" + source).slideToggle("slow");
+                    source.focus();
                 }
         </script>
 
@@ -295,44 +306,6 @@
             document.getElementById('headerLogo').addEventListener("click", function() {
                 window.location.href = "/";
             });
-
-            function getCookie(cname) {
-                var name = cname + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var ca = decodedCookie.split(';');
-                for(var i = 0; i <ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            };
-
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expires = "expires="+d.toUTCString();
-                document.cookie = cname + "=" + JSON.stringify(cvalue) + ";" + expires + ";path=/";
-            };
-
-           function deleteAllCookies() {
-                var cookies = document.cookie.split(";");
-
-                for (var i = 0; i < cookies.length; i++) {
-                    var cookie = cookies[i];
-                    var eqPos = cookie.indexOf("=");
-                    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-                    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-                }
-            }
-
-            var delete_cookie = function(name) {
-                document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-            };
             
             var checkboxJSON = {};
             if (getCookie('newBusiness') != "") {

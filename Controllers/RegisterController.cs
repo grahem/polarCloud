@@ -34,6 +34,7 @@ namespace Site.Controllers
         {
             IRegisterContactService registrationService = new RegisterS3ContactService();
             var response  = registrationService.Register(contact);
+            //create ContactHttpResponse
             return new JsonResult(response);
         }
 

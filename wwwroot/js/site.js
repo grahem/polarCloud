@@ -3,7 +3,6 @@
 
 // Write your JavaScript code.
 function registerUser(clickSource) {
-
     var subscribeToMailingList = false;
     if (document.getElementById('mailist').checked === true) {
         subscribeToMailingList = true;
@@ -22,20 +21,25 @@ function registerUser(clickSource) {
         "Company": document.getElementById('company').value,
         "MailingList": subscribeToMailingList
     };
+
+    contact.TimeZone = new Date().getTimezoneOffset();
     
     $.ajax({
-        url: 'api/register',
-        type: 'POST',
-        contentType: "application/json; charset=utf-8",
-        headers: {
-            RequestVerificationToken:
-                $('input:hidden[name="__RequestVerificationToken"]').val()
-        },
-        data: JSON.stringify(contact),
-        dataType: 'json'
-    })
+                url: 'api/register',
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                headers: {
+                    RequestVerificationToken:
+                        $('input:hidden[name="__RequestVerificationToken"]').val()
+                },
+                data: JSON.stringify(contact),
+                dataType: 'json'
+        })
         .done(function (result) {
-            //check for error
+            //TODO: check for error
+
+            //write contact to cookies
+            setCookie("contact", contact.Email);
             
             if (clickSource === 'contactUs') {
                 //diable form, hide button, show thank you
@@ -50,8 +54,7 @@ function registerUser(clickSource) {
                 document.getElementById('contactUs').style.display = "none";
                 document.getElementById('thankYou').style.display = "block";
             }
-            
-        });
+    });
 };
 
 if (document.getElementById('contactUs') !== null) {
@@ -65,6 +68,13 @@ if (document.getElementById('subscribe') !== null) {
        registerUser('subscribe');
     }
 }
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + JSON.stringify(cvalue) + ";" + expires + ";path=/";
+};
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -81,6 +91,4 @@ function getCookie(cname) {
     }
     return "";
 };
-
-
 

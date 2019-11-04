@@ -10,12 +10,13 @@ namespace Site.ServiceModels
     {
         public String Id { get; set; }
         public String FirsName { get; set; }
-        public String FirstName { get; set; }
         public String LastName { get; set; }
         public String Email { get; set; }
         public String Phone { get; set; }
         public String Website { get; set; }
         public String Company { get; set; }
+
+        public String Timezone { get; set; }
 
         public String MailingList { get; set; }
 
