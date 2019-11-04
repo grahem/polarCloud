@@ -95,7 +95,7 @@
             <p style="margin-top: 40px;"><strong>Setting up and maintaining a business requires adequate decision making, technology investments, and paperwork.  Here's our list:</strong></p>
             <p>If you'd like to use this form, we will track your progress.</p>
 
-            <ul style="padding-top: 20px"><li><h3 class="h3"><a href="#" onclick="toggle('foundational');">Foundational</a></h3></li></ul>
+            <div id="foundationalHeader"><ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('foundational');">Foundational</div></h3></li></ul></div>
             <div id="foundational" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="research"/> Industry research<br>
@@ -111,7 +111,7 @@
                 </ul>
             </div>
 
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#internet" onclick="toggle('internet');">Internet Infrastructure and Assets</a></h3></li></ul>
+            <div id="internetHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('internet');">Internet Infrastructure and Assets</div></h3></li></ul></div>
             <div id="internet" style="display: none">
                 <ul>
                     <p><input type="checkbox" class="checkbox" id="phoneNumbers"/> Phone numbers<br>
@@ -129,7 +129,7 @@
                 </ul>
             </div>
 
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#software" onclick="toggle('software');">Software</a></h3></li></ul>
+            <div id="softwareHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('software');">Software</div></h3></li></ul></div>
             <div id="software" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="projectTracking"/> Cloud-based project tracking software<br>
@@ -140,7 +140,7 @@
                 </ul>
             </div>
             
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#register" onclick="toggle('register');">Register</a></h3></li></ul>
+            <div id="registerHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('register');">Register</div></h3></li></ul></div>
             <div id="register" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="registeredAgent"/> Determine Registered Agent<br>
@@ -149,7 +149,7 @@
                 </ul>
             </div>
             
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#aoo" onclick="toggle('aoo');">File Articles of Organization</a></h3></li></ul>
+            <div id="aooHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('aoo');">File Articles of Organization</div></h3></li></ul></div>
             <div id="aoo" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="managementServices"/> Management Structure<br>
@@ -158,7 +158,7 @@
                 </ul>
             </div>
 
-            <ul  style="margin-top: 40px;"><li><h3 class="h3"><a href="#oa" onclick="toggle('oa');">File Operating Agreement</a></h3></li></ul>
+            <div id="oaHeader"><ul  style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('oa');">File Operating Agreement</div></h3></li></ul></div>
             <div id="oa" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="toc"/> Terms and Conditions<br>
@@ -170,7 +170,7 @@
                 </ul>
             </div>
             
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#llc" onclick="toggle('llc');">File Statement of Information (LLC-12 in California)</a></h3></li></ul>
+            <div id="llcHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('llc');">File Statement of Information (LLC-12 in California)</div></h3></li></ul></div>
             <div id="llc" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="LLCNumber"/> Filing Number<br>
@@ -185,7 +185,7 @@
                 </ul>
             </div>
             
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#additional" onclick="toggle('additional');">Additional</a></h3></li></ul>
+            <div id="additionalHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('additional');">Additional</div></h3></li></ul></div>
             <div id="additional" style="display: none">
                 <ul>
                     <p><input type="checkbox" name="chk" class="checkbox" id="dba"/> Register DBA with the state government<br>
@@ -239,7 +239,7 @@
                 </ul>
             </div>
 
-            <ul style="margin-top: 40px;"><li><h3 class="h3"><a href="#docs" onclick="toggle('docs');">Common Documents Requiring Letterheads</a></h3><ul></li>
+            <div id="docsHeader"><ul style="margin-top: 40px;"><li><h3 class="h3"><div onclick="toggle('docs');">Common Documents Requiring Letterheads</div></h3><ul></li></div>
             <div id="docs" style="display: none">
             <ul>
                 <p><input type="checkbox" name="chk" class="checkbox" id="lExecutiveSummary"/> Executive Summary<br>
@@ -297,8 +297,7 @@
 
          <script>
                 function toggle(source) {
-                    $("#" + source).slideToggle("slow");
-                    source.focus();
+                    $("#" + source).toggle();
                 }
         </script>
 
@@ -310,6 +309,7 @@
             var checkboxJSON = {};
             if (getCookie('newBusiness') != "") {
                 var cookieVal = getCookie('newBusiness');
+                
                 checkboxJSON = JSON.parse(JSON.parse(cookieVal));
             }
             

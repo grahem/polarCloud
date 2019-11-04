@@ -89,7 +89,7 @@
             </div>
     
             <div style="margin-top: 50px">
-                <h3 class="h3"><a href="#" onclick="toggle('preparation');">Preparation</a></h3>
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('preparation');">Preparation</div></h3></li></ul>
                 <div id="preparation" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="establishProtocol"/> Establish a protocol for staff to gain access to information
@@ -98,15 +98,15 @@
                     </ul>
                 </div>
 
-                <h3 class="h3"><a href="#contact" onclick="toggle('contact');">Contact</a></h3>
-                <div id="contact" style="display: none">
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('contact');">Contact</div></h3></li></ul>
+                <div id="contact" style="display: none; padding: 0 ">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="discovery"/> Conduct an initial discovery meeting
                         <p><input type="checkbox" class="checkbox" id="com1"/> Commit minutes to the data room
                     </ul>
                 </div>
 
-                <h3 class="h3"><a href="#overview" onclick="toggle('overview');">Overview</a></h3>
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('overview');">Overview</div></h3></li></ul>
                 <div id="overview" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="orgChart"/> Create or update the Org Chart
@@ -119,7 +119,8 @@
                         <p><input type="checkbox" class="checkbox" id="com2"/> Commit artifacts to the data room.
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#interviews" onclick="toggle('interviews');">Interviews</a></h3>
+                
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('interviews');">Interviews</div></h3></li></ul>
                 <div id="interviews" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="interviews"/> Conduct employee interviews
@@ -129,7 +130,7 @@
                     </ul>
                 </div>
 
-                <h3 class="h3"><a href="#organization" onclick="toggle('organization');">Organization and Operations</a></h3>
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('organization');">Organization and Operations</div></h3></li></ul>
                 <div id="organization" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="pnp"/> Review policies and procedures
@@ -137,7 +138,8 @@
                         <p><input type="checkbox" class="checkbox" id="com4"/> Gather feedback and commit to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#sdlc" onclick="toggle('sdlc');">Software Development Lifecycle</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('sdlc');">Software Development Lifecycle</div></h3></li></ul>
                 <div id="sdlc" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="tasks"/> Review items in technology project tracking software
@@ -149,7 +151,8 @@
                         <p><input type="checkbox" class="checkbox" id="com5"/> Commit artifacts to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#security" onclick="toggle('security');">Security</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('security');">Security</div></h3></li></ul>
                 <div id="security" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="secuirtyAudit"/> Review the most recent security audit
@@ -167,7 +170,8 @@
                         <p><input type="checkbox" class="checkbox" id="com6"/> Commit artifacts to the data repository
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#quality" onclick="toggle('quality');">Quality</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('quality');">Quality</div></h3></li></ul>
                 <div id="quality" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="tests"/> Review functional tests, integration tests, canaries, meters, monitors, and alarms
@@ -189,18 +193,8 @@
                         <p><input type="checkbox" class="checkbox" id="com7"/> Commit artifacts to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#diagraming" onclick="toggle('diagraming');">Diagraming</a></h3>
-                <div id="diagraming" style="display: none">
-                    <ul>
-                        <p><input type="checkbox" class="checkbox" id="footprintArchitecture"/> Produce Footprint Diagram
-                        <p><input type="checkbox" class="checkbox" id="physicalArchitecture"/> Produce Physical Diagram
-                        <p><input type="checkbox" class="checkbox" id="platformArchitecture"/> Produce Platform Architecture
-                        <p><input type="checkbox" class="checkbox" id="networkArchitecture"/> Produce Network Diagram
-                        <p><input type="checkbox" class="checkbox" id="deploymentArchitecture"/> Product Deployment Diagram
-                        <p><input type="checkbox" class="checkbox" id="com8"/> Commit artifacts to the data room
-                    </ul>
-                </div>
-                <h3 class="h3"><a href="#vendors" onclick="toggle('vendors');">Vendors</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('vendors');">Vendors</div></h3></li></ul>
                 <div id="vendors" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="vendorContracts"/> Obtain vendor contracts
@@ -211,7 +205,20 @@
                         <p><input type="checkbox" class="checkbox" id="com9"/> Commit to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#ce" onclick="toggle('ce');">Customer Engagement</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('diagraming');">Diagraming</div></h3></li></ul>
+                <div id="diagraming" style="display: none">
+                    <ul>
+                        <p><input type="checkbox" class="checkbox" id="footprintArchitecture"/> Produce Footprint Diagram
+                        <p><input type="checkbox" class="checkbox" id="physicalArchitecture"/> Produce Physical Diagram
+                        <p><input type="checkbox" class="checkbox" id="platformArchitecture"/> Produce Platform Architecture
+                        <p><input type="checkbox" class="checkbox" id="networkArchitecture"/> Produce Network Diagram
+                        <p><input type="checkbox" class="checkbox" id="deploymentArchitecture"/> Product Deployment Diagram
+                        <p><input type="checkbox" class="checkbox" id="com8"/> Commit artifacts to the data room
+                    </ul>
+                </div>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('ce');">Customer Engagement</div></h3></li></ul>
                 <div id="ce" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="leadAgg"/> Explain customer list or lead aggregation strategy
@@ -225,7 +232,8 @@
                         <p><input type="checkbox" class="checkbox" id="com10"/> Commit to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#bc" onclick="toggle('bc');">Business Continuity</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('bc');">Business Continuity</div></h3></li></ul>
                 <div id="bc" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="continuityPlan"/> Evaluate the business continuity plan
@@ -248,7 +256,8 @@
                         <p><input type="checkbox" class="checkbox" id="com11"/> Commit artifacts to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#operations" onclick="toggle('operations');">Operations</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('operations');">Operations</div></h3></li></ul>
                 <div id="operations" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="meter"/> Document meters, monitors, alarms and escalation processes
@@ -258,7 +267,8 @@
                         <p><input type="checkbox" class="checkbox" id="com12"/> Commit artifacts to the data room
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#compliance" onclick="toggle('compliance');">Compliance</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('compliance');">Compliance</div></h3></li></ul>
                 <div id="compliance" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="csa"/> Cloud Security Alliance Controls (CSA) review
@@ -270,7 +280,8 @@
                         <p><input type="checkbox" class="checkbox" id="iso27001"/> Industry Specific
                     </ul>
                 </div>
-                <h3 class="h3"><a href="#postmortem" onclick="toggle('postmortem');">Postmortem</a></h3>
+
+                <ul style="padding-top: 20px"><li><h3 class="h3"><div onclick="toggle('postmortem');">Postmortem</div></h3></li></ul>
                 <div id="postmortem" style="display: none">
                     <ul>
                         <p><input type="checkbox" class="checkbox" id="gap"/> Conduct GAP analysis
